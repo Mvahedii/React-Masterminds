@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 
-
 import Tabs from './component/tabs'
+
+import './App.css'
 
 class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Tabs />
-      </React.Fragment>
+      <div className="game">
+          <Tabs />
+        </div>
     )
   }
 }

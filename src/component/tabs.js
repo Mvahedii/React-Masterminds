@@ -11,23 +11,27 @@ class TabsComponent extends Component {
         };
     }
 
+    logData = () => {
+        console.log(this.state.key)
+    }
+
     render() {
         return (
             <Tabs
-                className="tabsControll"
+                transition={false}
                 id="controlled-tab-example"
                 activeKey={this.state.key}
                 onSelect={key => this.setState({ key })}
             >
                 <Tab eventKey="easy" title="Easy">
                     <FormComponent />
-            </Tab>
+                </Tab>
                 <Tab eventKey="medium" title="Medium">
                     <FormComponent />
-            </Tab>
+                </Tab>
                 <Tab eventKey="hard" title="Hard">
                     <FormComponent />
-            </Tab>
+                </Tab>
             </Tabs>
         )
     }
