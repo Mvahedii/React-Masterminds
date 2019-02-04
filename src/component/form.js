@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import { Form,  Button } from 'react-bootstrap'
 
+import './form.css'
+
 class FormComponent extends Component {
 
     render() {
 
         return (
-            <Form className="formSection">
+            <Form>
                 <Form.Group>
                     <Form.Control type="number" placeholder="Enter Number..." />
                 </Form.Group>
-                <Button variant="primary" type="submit">GUESS</Button>
+                <Button className="submitButton" variant="danger" type="submit">GUESS</Button>
             </Form>
 
         )
