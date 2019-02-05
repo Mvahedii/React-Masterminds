@@ -11,28 +11,31 @@ class TabsComponent extends Component {
         };
     }
 
-    logData = () => {
-        console.log(this.state.key)
-    }
+    // logData = () => {
+    //     console.log(this.state.key)
+    // }
 
     render() {
         return (
-            <Tabs
-                transition={false}
-                id="controlled-tab-example"
-                activeKey={this.state.key}
-                onSelect={key => this.setState({ key })}
-            >
-                <Tab eventKey="easy" title="Easy">
-                    <FormComponent />
-                </Tab>
-                <Tab eventKey="medium" title="Medium">
-                    <FormComponent />
-                </Tab>
-                <Tab eventKey="hard" title="Hard">
-                    <FormComponent />
-                </Tab>
-            </Tabs>
+            <>
+                <Tabs
+                    transition={false}
+                    id="controlled-tab-example"
+                    activeKey={this.state.key}
+                    onSelect={key => this.setState({ key })}
+                >
+                    <Tab eventKey="easy" title="Easy" >
+                        {/* {this.logData()} */}
+                    </Tab>
+                    <Tab eventKey="medium" title="Medium" >
+                    </Tab>
+                    <Tab eventKey="hard" title="Hard"  >
+
+                    </Tab>
+                </Tabs>
+                <FormComponent level={this.state.key} />
+            </>
+
         )
     }
 }
